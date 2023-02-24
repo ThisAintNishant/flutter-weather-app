@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1045029044825",
+    "project_id": "flutterforwardextended",
+    "storage_bucket": "flutterforwardextended.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1045029044825:android:8dfc073d68facefeb2e748",
+        "android_client_info": {
+          "package_name": "com.example.untitled101"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1045029044825-571tetb0hhs5hda3m8ovt0bqnaimbg62.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZTj1r1Pn1BapbNLQnoPo07eiYtafjTRk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1045029044825-571tetb0hhs5hda3m8ovt0bqnaimbg62.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
