@@ -71,7 +71,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           color: constant.textColor2,
                         ))),
                 onPressed: () async {
-                  /*try {
+                  try {
                     final newUser = await _auth.signInWithEmailAndPassword(
                         email: email, password: password);
                     if (newUser.user != null && myvar != 0) {
@@ -80,9 +80,9 @@ class _LoginScreenState extends State<LoginScreen> {
                     }
                   } catch (e) {
                     debugPrint('$e');
-                  }*/
-                  Navigator.pushReplacement(context,
-                      MaterialPageRoute(builder: (context) => MainScreen()));
+                  }
+                  //Navigator.pushReplacement(context,
+                    //  MaterialPageRoute(builder: (context) => MainScreen()));
                 },
                 child: Text(
                   'Login',
