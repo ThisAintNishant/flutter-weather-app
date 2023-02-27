@@ -1,8 +1,8 @@
-
 import 'package:flutter/material.dart';
 import '../Components/textfield.dart';
 import '../constants.dart' as constant;
 import 'package:firebase_auth/firebase_auth.dart';
+import '../Network/Location.dart';
 
 import 'mainscreen.dart';
 
@@ -15,7 +15,21 @@ class LoginScreen extends StatefulWidget {
 
 class _LoginScreenState extends State<LoginScreen> {
   late String email, password;
-  int myvar=1;
+  int myvar = 0;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    apiCall();
+  }
+
+  void apiCall() async {
+    var location = await determinePosition();
+    myvar = await constant.apiInstance.getLocation(
+        location.latitude.toString(), location.longitude.toString());
+  }
+
   @override
   Widget build(BuildContext context) {
     final _auth = FirebaseAuth.instance;
@@ -67,8 +81,8 @@ class _LoginScreenState extends State<LoginScreen> {
                   } catch (e) {
                     debugPrint('$e');
                   }*/
-                  Navigator.pushReplacement(
-                      context, MaterialPageRoute(builder: (context)=>MainScreen()));
+                  Navigator.pushReplacement(context,
+                      MaterialPageRoute(builder: (context) => MainScreen()));
                 },
                 child: Text(
                   'Login',
@@ -86,4 +100,3 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 }
-
