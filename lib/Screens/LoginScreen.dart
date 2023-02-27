@@ -1,4 +1,3 @@
-import 'dart:js';
 
 import 'package:flutter/material.dart';
 import '../Components/textfield.dart';
@@ -16,7 +15,7 @@ class LoginScreen extends StatefulWidget {
 
 class _LoginScreenState extends State<LoginScreen> {
   late String email, password;
-  int myvar=0;
+  int myvar=1;
   @override
   Widget build(BuildContext context) {
     final _auth = FirebaseAuth.instance;
@@ -58,7 +57,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           color: constant.textColor2,
                         ))),
                 onPressed: () async {
-                  try {
+                  /*try {
                     final newUser = await _auth.signInWithEmailAndPassword(
                         email: email, password: password);
                     if (newUser.user != null && myvar != 0) {
@@ -67,7 +66,9 @@ class _LoginScreenState extends State<LoginScreen> {
                     }
                   } catch (e) {
                     debugPrint('$e');
-                  }
+                  }*/
+                  Navigator.pushReplacement(
+                      context, MaterialPageRoute(builder: (context)=>MainScreen()));
                 },
                 child: Text(
                   'Login',
